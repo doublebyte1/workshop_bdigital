@@ -1,0 +1,112 @@
+
+//view the data
+
+stored on this bucket
+s3://workshop-bdsd/accidents/
+
+aws s3 ls s3://workshop-bdsd/accidents/
+
+https://s3-eu-west-1.amazonaws.com/workshop-bdsd/accidents/accidents_sample.csv
+
+cat accidents_sample.csv
+
+//import the data
+CREATE EXTERNAL TABLE accident_import(
+  Any  INT, mes  INT, dia  INT, C_HORA_TRUCADA   DOUBLE, D_COORD_GEO_IMPACTE  STRING)
+row format serde 'com.bizo.hive.serde.csv.CSVSerde'
+with serdeproperties(
+"separatorChar" = "\;",
+"quoteChar" = "\"")
+stored as textfile
+LOCATION 's3n://workshop-bdsd/accidents/'
+tblproperties ("skip.header.line.count"="1");
+
+describe accident_import
+
+//create a table with correct types
+CREATE TABLE accident_data(
+  Any  INT, mes  INT, dia  INT, C_HORA_TRUCADA   DOUBLE, D_COORD_GEO_IMPACTE  STRING);
+  
+insert into table accident_data select * from accident_import; 
+
+//create table for pig (id)
+create table accident_data_id as
+select reflect("java.util.UUID", "randomUUID") as id, * from accident_data;
+
+geohive -e 'select * from accident_data_id where D_COORD_GEO_IMPACTE is not null' > accident_data.tsv
+
+hadoop fs -put accident_data.tsv /home/hduser/data
+
+hadoop fs -cat /home/hduser/data/accident_data.tsv
+
+create external table accident_data_wgs84 
+(  id string, Any  INT, mes    INT, dia     INT, C_HORA_TRUCADA  DOUBLE, D_COORD_GEO_IMPACTE   STRING, id2 string, lon DOUBLE, lat DOUBLE)
+  ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n'
+  location 'hdfs://localhost:54310/home/hduser/data/data_wgs84';
+
+create external table accident_data_utm 
+(  id string, Any  INT, mes    INT, dia     INT, C_HORA_TRUCADA  DOUBLE, D_COORD_GEO_IMPACTE   STRING, id2 string, lon DOUBLE, lat DOUBLE)
+  ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n'
+  location 'hdfs://localhost:54310/home/hduser/data/data_utm';
+
+create external table accident_data_pol 
+(  id string, Any  INT, mes    INT, dia     INT, C_HORA_TRUCADA  DOUBLE, D_COORD_GEO_IMPACTE   STRING, id2 string, lon DOUBLE, lat DOUBLE)
+  ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n'
+  location 'hdfs://localhost:54310/home/hduser/data/data_pol';
+
+  //merge utm tables  
+ create table utm_data_all as select * from accident_data_utm; 
+ insert into table utm_data_all select * from accident_data_pol;
+
+ geohive -e 'select id,lon,lat from utm_data_all' > utm_export.tsv
+  
+ psql -h bdigitaldb.celqzuwfokoe.eu-west-1.rds.amazonaws.com -p 5432 -U workshop workshop_bdigital -W
+  
+ select * from spatial_ref_sys where srid=5554;
+
+create table coords(id varchar, lon double precision, lat double precision);
+\COPY coords FROM 'utm_export.tsv';
+
+alter table coords add column utm geometry;
+alter table coords add column wgs84 geometry;
+
+select updategeometrysrid('coords','utm', 5554);
+select updategeometrysrid('coords','wgs84', 4326);
+
+CREATE INDEX idx_coords_utm ON coords USING GIST (utm);
+CREATE INDEX idx_coords_wgs84 ON coords USING GIST (wgs84);
+
+update coords set utm=ST_SetSRID(ST_MakePoint(lon,lat), 5554);
+UPDATE coords set wgs84=(ST_Transform(utm, 4326));
+
+\COPY (select id, ST_ASGeoJson(wgs84) from coords) TO '/home/hduser/coords_data.json';
+
+hadoop fs -mkdir /home/hduser/data/coords_data
+hadoop fs -put coords_data.json /home/hduser/data/coords_data
+
+CREATE EXTERNAL TABLE coords_data_tmp (id STRING, json STRING)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t'
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE
+LOCATION 'hdfs://localhost:54310/home/hduser/data/coords_data/';
+
+//create a table with an instantiation of the grid geometry
+CREATE TABLE coords_data AS
+SELECT id, ST_GeomFromGeoJson(json) as geom from coords_data_tmp;
+
+create table all_geometry as
+select 
+  accident_data_id.id,Any , mes , dia  , C_HORA_TRUCADA , D_COORD_GEO_IMPACTE     
+  , ST_X(geom) as lon, ST_Y(geom) as lat from accident_data_id join coords_data ON (accident_data_id.id=coords_data.id);
+
+insert into table all_geometry
+  select   id, any  , mes   , dia   , C_HORA_TRUCADA  , D_COORD_GEO_IMPACTE , lon, lat from accident_data_wgs84;
+  
+
+
+
+
+
+
+ 
+ 

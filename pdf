@@ -1,0 +1,4 @@
+pdflatex workshop_bdigital
+pdflatex workshop_bdigital
+okular workshop_bdigital.pdf
+
