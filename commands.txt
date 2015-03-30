@@ -103,7 +103,8 @@ insert into table all_geometry
   select   id, any  , mes   , dia   , C_HORA_TRUCADA  , D_COORD_GEO_IMPACTE , lon, lat from accident_data_wgs84;
   
 
-
+//export data
+geohive -e 'select concat("{\"index\":{\"_index\":\"accidents\",\"_type\":\"accident\",\"_id\":", rowsequence() , "}} \n") ,  "loc", array(cast(lon as double),cast(lat as double)) from all_geometry;' > all_geometry.json
 
 
 
