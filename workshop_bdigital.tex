@@ -60,6 +60,7 @@
 \begin{titlepage}
 \centering{ 
   \includegraphics[height=50px]{hadoop.png}    
+  \includegraphics[height=50px]{hive2.png}    
   \includegraphics[height=50px]{esri.jpg}  
   \includegraphics[height=50px]{pig.png}    
   \includegraphics[height=50px]{postgis.png}    
@@ -155,45 +156,74 @@ There are no free lunches.
       \end{figure}  
 \end{frame}
 
+\begin{frame}
+\frametitle{Apache Hadoop}
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+    \begin{itemize}
+      \item<1->framework for distributed storage and processing of (Big) Data on computer Clusters
+      \begin{itemize}
+	\item<2->\textbf{Storage:} HDFS
+	\item<2->\textbf{Processing:} MapReduce	
+      \end{itemize}    
+      \item<3->It features a FOS license (Apache 2.0)
+      \item<4->EMR is an Amazon service that uses Hadoop
+    \end{itemize}    
+  \end{column}
+  \begin{column}{0.5\textwidth}
+      \begin{figure}  
+	\includegraphics[width=\textwidth]{hadoop.png}
+       \end{figure}  
+  \end{column}  
+\end{columns}
+\end{frame}
+
 
 \begin{frame}
-\frametitle{Hadoop}
-  %\begin{itemize}
-  %\item<1->Problem: the increasing volume of information, by explosion of traditional sources + new sources
-  %\item<1->Target: fast query responses, which require a scalable architecture
-  %\item<1->Possible solution: support clusters on a cost-effective architecture, such as commodity clusters or cloud environments
-%\end{itemize}  
- %     \begin{figure}  
-%	\includegraphics[width=0.4\textwidth]{flying_cat.jpg}
- %      \end{figure}  
+\frametitle{Apache Hive}
+\begin{columns}
+  \begin{column}{0.8\textwidth}
+    \begin{itemize}
+      \item<1->Data warehouse infrastructure built on top of Hadoop for providing data summarization, query, and analysis.%facebook to netflix
+      \item<3->HiveQL: query language based on SQL% SQL-92 
+      \begin{itemize}
+	\item<2->An internal compiler translates HiveQL statements into MapReduce jobs
+      \end{itemize}          
+      \item<3->It features a FOS license (Apache 2.0)
+      \item<4->EMR features an Hive installation
+    \end{itemize}    
+  \end{column}
+  \begin{column}{0.2\textwidth}
+      \begin{figure}  
+	\includegraphics[width=\textwidth]{hive2.png}
+       \end{figure}  
+  \end{column}  
+\end{columns}
 \end{frame}
 
 \begin{frame}
-\frametitle{Hive}
-  %\begin{itemize}
-  %\item<1->Problem: the increasing volume of information, by explosion of traditional sources + new sources
-  %\item<1->Target: fast query responses, which require a scalable architecture
-  %\item<1->Possible solution: support clusters on a cost-effective architecture, such as commodity clusters or cloud environments
-%\end{itemize}  
- %     \begin{figure}  
-%	\includegraphics[width=0.4\textwidth]{flying_cat.jpg}
- %      \end{figure}  
+\frametitle{Apache Pig}
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+    \begin{itemize}
+      \item<1->High-level platform for creating MapReduce jobs over Hadoop.%scripting Yahoo very different from SQL
+      \item<2->It features an interactive mode and a batch mode
+      \item<3->It uses lazy evaluation %it delays the evaluation of an expression until value is needed (efficiency)
+      \item<4->Pig Latin is procedural %based on steps; declarative:logics instead of the flow (whatwe want to achieve)
+      \item<5->It features a FOS license (Apache 2.0)
+      \item<6->EMR may install Pig
+    \end{itemize}    
+  \end{column}
+  \begin{column}{0.5\textwidth}
+      \begin{figure}  
+	\includegraphics[width=\textwidth]{pig_logo.jpg}
+       \end{figure}  
+  \end{column}  
+\end{columns}
 \end{frame}
 
 \begin{frame}
 \frametitle{Hadoop GIS}
-  %\begin{itemize}
-  %\item<1->Problem: the increasing volume of information, by explosion of traditional sources + new sources
-  %\item<1->Target: fast query responses, which require a scalable architecture
-  %\item<1->Possible solution: support clusters on a cost-effective architecture, such as commodity clusters or cloud environments
-%\end{itemize}  
- %     \begin{figure}  
-%	\includegraphics[width=0.4\textwidth]{flying_cat.jpg}
- %      \end{figure}  
-\end{frame}
-
-\begin{frame}
-\frametitle{Pig}
   %\begin{itemize}
   %\item<1->Problem: the increasing volume of information, by explosion of traditional sources + new sources
   %\item<1->Target: fast query responses, which require a scalable architecture
