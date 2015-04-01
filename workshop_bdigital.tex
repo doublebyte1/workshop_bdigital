@@ -223,31 +223,69 @@ There are no free lunches.
 \end{frame}
 
 \begin{frame}
+\frametitle{Spatial Support}
+      \begin{figure}  
+	\includegraphics[width=0.4\textwidth]{globe-question.png}
+       \end{figure}  
+\end{frame}
+
+\begin{frame}
 \frametitle{Hadoop GIS}
-  %\begin{itemize}
-  %\item<1->Problem: the increasing volume of information, by explosion of traditional sources + new sources
-  %\item<1->Target: fast query responses, which require a scalable architecture
-  %\item<1->Possible solution: support clusters on a cost-effective architecture, such as commodity clusters or cloud environments
-%\end{itemize}  
- %     \begin{figure}  
-%	\includegraphics[width=0.4\textwidth]{flying_cat.jpg}
- %      \end{figure}  
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+   \begin{itemize}  
+    \item<1->FOS toolkit for "Big Spatial Data Analytics".%from ESRI. %github. Apache License
+    \item<2->Hosted on github.
+    \item<3->It consists in three libraries:
+   \begin{itemize}    
+      \item<4->Esri Geometry API for Java.
+      \item<4->Geoprocessing Tools for Hadoop.
+      \item<4->\textbf{Spatial Framework for Hadoop (SFH):} extends Hive to to enable spatial queries and geometry types.% It is based on the ESRI Geometry API for Java
+    \end{itemize} 
+   \end{itemize}     
+ \end{column}  
+  \begin{column}{0.5\textwidth}
+    \begin{figure}       
+	\includegraphics[width=\textwidth]{gis4hadoop.png}      
+     \end{figure}        
+ \end{column}  
+ \end{columns}  
 \end{frame}
 
 \begin{frame}
-\frametitle{PostgreSQL + PostGIS}
-  %\begin{itemize}
-  %\item<1->Problem: the increasing volume of information, by explosion of traditional sources + new sources
-  %\item<1->Target: fast query responses, which require a scalable architecture
-  %\item<1->Possible solution: support clusters on a cost-effective architecture, such as commodity clusters or cloud environments
-%\end{itemize}  
- %     \begin{figure}  
-%	\includegraphics[width=0.4\textwidth]{flying_cat.jpg}
- %      \end{figure}  
+\frametitle{Pigeon}
+    \begin{itemize}
+    \item<1->Wrapper around the geometry API from ESRI.
+    \item<1->Adds spatial support to Pig Latin.
+  \end{itemize}  
+      \begin{figure}  
+	\includegraphics[width=0.8\textwidth]{pigeon.jpg}
+       \end{figure}  
 \end{frame}
 
 \begin{frame}
-\frametitle{E(L)K}
+\frametitle{PostGIS}
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+    \begin{itemize}
+      \item<1->Spatial extension for the RDBMS PostgreSQL
+      \item<1->Free and Open Source License (GPL 2.0)
+      \item<2->Standards support% (Simple Feature Specification from OGC)
+      \item<3->High Performance%smallest possible representations of geometry and index structures to maximize performance. 
+      \item<4->Famous users: Foursquare, Instagram, CartoDB.       
+    \end{itemize}    
+  \end{column}
+  \begin{column}{0.5\textwidth}
+      \begin{figure}  
+	\includegraphics[width=0.7\textwidth]{postgis.png}
+       \end{figure}  
+  \end{column}  
+\end{columns}
+
+\end{frame}
+
+%\begin{frame}
+%\frametitle{E(L)K}
 %\begin{itemize}
 %  \item<1->Micro-task: Join imported coordinates with WGS84 coordinates and the rest of the dataset
 %  \begin{itemize}
@@ -255,6 +293,11 @@ There are no free lunches.
 %    \item<3->Merge imported records with WGS84 records, for a single table with unified geometry
 %  \end{itemize}
 %\end{itemize}
+%\end{frame}
+
+\begin{frame}
+\frametitle{Practical}
+  \huge{Hands-on}
 \end{frame}
 
 %start and connect to the cluster

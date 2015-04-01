@@ -1,6 +1,6 @@
 \beamer@endinputifotherversion {3.24pt}
 \beamer@sectionintoc {1}{Introduction}{3}{0}{1}
-\beamer@sectionintoc {2}{Importing a Spatial-Temporal Series}{32}{0}{2}
-\beamer@sectionintoc {3}{Recovering the Spatial Attributes}{43}{0}{3}
-\beamer@sectionintoc {4}{Putting it All Together}{87}{0}{4}
-\beamer@sectionintoc {5}{Piping the Results into the Outside World}{90}{0}{5}
+\beamer@sectionintoc {2}{Importing a Spatial-Temporal Series}{40}{0}{2}
+\beamer@sectionintoc {3}{Recovering the Spatial Attributes}{51}{0}{3}
+\beamer@sectionintoc {4}{Putting it All Together}{95}{0}{4}
+\beamer@sectionintoc {5}{Piping the Results into the Outside World}{98}{0}{5}

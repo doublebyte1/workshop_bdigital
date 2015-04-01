@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.18)  30 MAR 2015 16:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.18)  1 APR 2015 05:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1190,81 +1190,123 @@ Package pdftex.def Info: pig_logo.jpg used on input line 223.
 (pdftex.def)             Requested size: 153.64493pt x 129.82736pt.
  [28
 
-] [29
+]
+<globe-question.png, id=371, 501.875pt x 711.65875pt>
+File: globe-question.png Graphic file (type png)
+ <use globe-question.png>
+Package pdftex.def Info: globe-question.png used on input line 230.
+(pdftex.def)             Requested size: 122.91406pt x 174.28734pt.
 
-] [30
+[29
 
-] [31
+ <./globe-question.png>] <gis4hadoop.png, id=383, 301.125pt x 231.86626pt>
+File: gis4hadoop.png Graphic file (type png)
+
+<use gis4hadoop.png>
+Package pdftex.def Info: gis4hadoop.png used on input line 253.
+(pdftex.def)             Requested size: 153.64493pt x 118.31036pt.
+ [30
+
+ <./gis4hadoop.png>]
+File: gis4hadoop.png Graphic file (type png)
+ <use gis4hadoop.png>
+Package pdftex.def Info: gis4hadoop.png used on input line 253.
+(pdftex.def)             Requested size: 153.64493pt x 118.31036pt.
+ [31
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 274
+File: gis4hadoop.png Graphic file (type png)
+
+<use gis4hadoop.png>
+Package pdftex.def Info: gis4hadoop.png used on input line 253.
+(pdftex.def)             Requested size: 153.64493pt x 118.31036pt.
+ [32
+
+]
+File: gis4hadoop.png Graphic file (type png)
+ <use gis4hadoop.png>
+Package pdftex.def Info: gis4hadoop.png used on input line 253.
+(pdftex.def)             Requested size: 153.64493pt x 118.31036pt.
+ [33
+
+]
+<pigeon.jpg, id=426, 640.3925pt x 453.695pt>
+File: pigeon.jpg Graphic file (type jpg)
+ <use pigeon.jpg>
+Package pdftex.def Info: pigeon.jpg used on input line 264.
+(pdftex.def)             Requested size: 245.83282pt x 174.15736pt.
+
+Overfull \vbox (25.78024pt too high) detected at line 264
+ []
+
+[34
+
+ <./pigeon.jpg>]
+File: postgis.png Graphic file (type png)
+ <use postgis.png>
+Package pdftex.def Info: postgis.png used on input line 285.
+(pdftex.def)             Requested size: 107.55098pt x 157.91335pt.
+ [35
+
+]
+File: postgis.png Graphic file (type png)
+ <use postgis.png>
+Package pdftex.def Info: postgis.png used on input line 285.
+(pdftex.def)             Requested size: 107.55098pt x 157.91335pt.
+ [36
+
+]
+File: postgis.png Graphic file (type png)
+
+<use postgis.png>
+Package pdftex.def Info: postgis.png used on input line 285.
+(pdftex.def)             Requested size: 107.55098pt x 157.91335pt.
+ [37
+
+]
+File: postgis.png Graphic file (type png)
+ <use postgis.png>
+Package pdftex.def Info: postgis.png used on input line 285.
+(pdftex.def)             Requested size: 107.55098pt x 157.91335pt.
+ [38
+
+] [39
+
+]
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 317
 .
 
 (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 274.
+(Font)              <10> on input line 317.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 274.
+(Font)              <7> on input line 317.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 274.
+(Font)              <5> on input line 317.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 274.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 317.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <7> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 274.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 317.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <5> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 274.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 317.
 
 LaTeX Font Info:    Font shape `OT1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 274.
- [32
-
-] [33
-
-] [34
-
-] [35
-
-] [36
-
-] [37
-
-]
-[38
-
-] [39
-
-] [40
+(Font)              Font shape `OT1/lmtt/b/n' tried instead on input line 317.
+ [40
 
 ] [41
 
 ] [42
 
-] <bettermap.png, id=524, 606.01407pt x 410.2828pt>
-File: bettermap.png Graphic file (type png)
+] [43
 
-<use bettermap.png>
-Package pdftex.def Info: bettermap.png used on input line 323.
-(pdftex.def)             Requested size: 153.64493pt x 104.0166pt.
- [43
+] [44
 
- <./bettermap.png>]
-File: bettermap.png Graphic file (type png)
- <use bettermap.png>
-Package pdftex.def Info: bettermap.png used on input line 323.
-(pdftex.def)             Requested size: 153.64493pt x 104.0166pt.
- [44
-
-]
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <9> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 347.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 347.
- [45
+] [45
 
 ]
 [46
@@ -1277,87 +1319,57 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 ] [50
 
+] <bettermap.png, id=611, 606.01407pt x 410.2828pt>
+File: bettermap.png Graphic file (type png)
+
+<use bettermap.png>
+Package pdftex.def Info: bettermap.png used on input line 366.
+(pdftex.def)             Requested size: 153.64493pt x 104.0166pt.
+ [51
+
+ <./bettermap.png>]
+File: bettermap.png Graphic file (type png)
+ <use bettermap.png>
+Package pdftex.def Info: bettermap.png used on input line 366.
+(pdftex.def)             Requested size: 153.64493pt x 104.0166pt.
+ [52
+
 ]
-Overfull \hbox (12.84435pt too wide) in paragraph at lines 358--358
-[] 
- []
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <9> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 390.
 
-<ETRS89-2.jpg, id=609, 351.3125pt x 203.76125pt>
-File: ETRS89-2.jpg Graphic file (type jpg)
- <use ETRS89-2.jpg>
-Package pdftex.def Info: ETRS89-2.jpg used on input line 358.
-(pdftex.def)             Requested size: 153.64493pt x 89.11734pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 390.
+ [53
 
-Overfull \vbox (8.74025pt too high) detected at line 358
- []
-
-[51
-
- <./ETRS89-2.jpg>] [52
-
-] [53
-
-] [54
+]
+[54
 
 ] [55
 
 ] [56
 
+] [57
+
+] [58
+
 ]
-<pig-on-elephant.png, id=671, 220.6644pt x 198.0198pt>
-File: pig-on-elephant.png Graphic file (type png)
-
-<use pig-on-elephant.png>
-Package pdftex.def Info: pig-on-elephant.png used on input line 401.
-(pdftex.def)             Requested size: 153.64493pt x 137.8817pt.
- [57
-
- <./pig-on-elephant.png>]
-Overfull \hbox (107.63081pt too wide) in paragraph at lines 420--420
-\OT1/lmss/m/n/10.95 REGEX[]EXTRACT(D[]COORD[]GEO[]IMPACTE,'[A- 
+Overfull \hbox (12.84435pt too wide) in paragraph at lines 401--401
+[] 
  []
 
-<yesterdays-regex.jpg, id=683, 240.9pt x 340.8735pt>
-File: yesterdays-regex.jpg Graphic file (type jpg)
+<ETRS89-2.jpg, id=695, 351.3125pt x 203.76125pt>
+File: ETRS89-2.jpg Graphic file (type jpg)
+ <use ETRS89-2.jpg>
+Package pdftex.def Info: ETRS89-2.jpg used on input line 401.
+(pdftex.def)             Requested size: 153.64493pt x 89.11734pt.
 
-<use yesterdays-regex.jpg>
-Package pdftex.def Info: yesterdays-regex.jpg used on input line 420.
-(pdftex.def)             Requested size: 153.64493pt x 217.41449pt.
-
-Overfull \vbox (35.70822pt too high) detected at line 420
- []
-
-[58
-
- <./yesterdays-regex.jpg>]
-Overfull \hbox (107.63081pt too wide) in paragraph at lines 420--420
-\OT1/lmss/m/n/10.95 REGEX[]EXTRACT(D[]COORD[]GEO[]IMPACTE,'[A- 
- []
-
-File: yesterdays-regex.jpg Graphic file (type jpg)
-<use yesterdays-regex.jpg>
-Package pdftex.def Info: yesterdays-regex.jpg used on input line 420.
-(pdftex.def)             Requested size: 153.64493pt x 217.41449pt.
-
-Overfull \vbox (35.70822pt too high) detected at line 420
+Overfull \vbox (8.74025pt too high) detected at line 401
  []
 
 [59
 
-]
-Overfull \hbox (107.63081pt too wide) in paragraph at lines 420--420
-\OT1/lmss/m/n/10.95 REGEX[]EXTRACT(D[]COORD[]GEO[]IMPACTE,'[A- 
- []
-
-File: yesterdays-regex.jpg Graphic file (type jpg)
-<use yesterdays-regex.jpg>
-Package pdftex.def Info: yesterdays-regex.jpg used on input line 420.
-(pdftex.def)             Requested size: 153.64493pt x 217.41449pt.
-
-Overfull \vbox (35.70822pt too high) detected at line 420
- []
-
-[60
+ <./ETRS89-2.jpg>] [60
 
 ] [61
 
@@ -1367,33 +1379,65 @@ Overfull \vbox (35.70822pt too high) detected at line 420
 
 ] [64
 
-] [65
+]
+<pig-on-elephant.png, id=757, 220.6644pt x 198.0198pt>
+File: pig-on-elephant.png Graphic file (type png)
 
-] [66
+<use pig-on-elephant.png>
+Package pdftex.def Info: pig-on-elephant.png used on input line 444.
+(pdftex.def)             Requested size: 153.64493pt x 137.8817pt.
+ [65
 
-] [67
+ <./pig-on-elephant.png>]
+Overfull \hbox (107.63081pt too wide) in paragraph at lines 463--463
+\OT1/lmss/m/n/10.95 REGEX[]EXTRACT(D[]COORD[]GEO[]IMPACTE,'[A- 
+ []
+
+<yesterdays-regex.jpg, id=769, 240.9pt x 340.8735pt>
+File: yesterdays-regex.jpg Graphic file (type jpg)
+
+<use yesterdays-regex.jpg>
+Package pdftex.def Info: yesterdays-regex.jpg used on input line 463.
+(pdftex.def)             Requested size: 153.64493pt x 217.41449pt.
+
+Overfull \vbox (35.70822pt too high) detected at line 463
+ []
+
+[66
+
+ <./yesterdays-regex.jpg>]
+Overfull \hbox (107.63081pt too wide) in paragraph at lines 463--463
+\OT1/lmss/m/n/10.95 REGEX[]EXTRACT(D[]COORD[]GEO[]IMPACTE,'[A- 
+ []
+
+File: yesterdays-regex.jpg Graphic file (type jpg)
+<use yesterdays-regex.jpg>
+Package pdftex.def Info: yesterdays-regex.jpg used on input line 463.
+(pdftex.def)             Requested size: 153.64493pt x 217.41449pt.
+
+Overfull \vbox (35.70822pt too high) detected at line 463
+ []
+
+[67
 
 ]
-File: postgis.png Graphic file (type png)
- <use postgis.png>
-Package pdftex.def Info: postgis.png used on input line 467.
-(pdftex.def)             Requested size: 122.9164pt x 180.47516pt.
- [68
+Overfull \hbox (107.63081pt too wide) in paragraph at lines 463--463
+\OT1/lmss/m/n/10.95 REGEX[]EXTRACT(D[]COORD[]GEO[]IMPACTE,'[A- 
+ []
 
-]
-File: postgis.png Graphic file (type png)
+File: yesterdays-regex.jpg Graphic file (type jpg)
+<use yesterdays-regex.jpg>
+Package pdftex.def Info: yesterdays-regex.jpg used on input line 463.
+(pdftex.def)             Requested size: 153.64493pt x 217.41449pt.
 
-<use postgis.png>
-Package pdftex.def Info: postgis.png used on input line 467.
-(pdftex.def)             Requested size: 122.9164pt x 180.47516pt.
- [69
+Overfull \vbox (35.70822pt too high) detected at line 463
+ []
 
-]
-File: postgis.png Graphic file (type png)
- <use postgis.png>
-Package pdftex.def Info: postgis.png used on input line 467.
-(pdftex.def)             Requested size: 122.9164pt x 180.47516pt.
- [70
+[68
+
+] [69
+
+] [70
 
 ] [71
 
@@ -1405,12 +1449,27 @@ Package pdftex.def Info: postgis.png used on input line 467.
 
 ] [75
 
-] [76
+]
+File: postgis.png Graphic file (type png)
+ <use postgis.png>
+Package pdftex.def Info: postgis.png used on input line 510.
+(pdftex.def)             Requested size: 122.9164pt x 180.47516pt.
+ [76
 
 ]
-[77
+File: postgis.png Graphic file (type png)
 
-] [78
+<use postgis.png>
+Package pdftex.def Info: postgis.png used on input line 510.
+(pdftex.def)             Requested size: 122.9164pt x 180.47516pt.
+ [77
+
+]
+File: postgis.png Graphic file (type png)
+ <use postgis.png>
+Package pdftex.def Info: postgis.png used on input line 510.
+(pdftex.def)             Requested size: 122.9164pt x 180.47516pt.
+ [78
 
 ] [79
 
@@ -1418,19 +1477,14 @@ Package pdftex.def Info: postgis.png used on input line 467.
 
 ] [81
 
-] <geojson2.jpg, id=938, 325.72394pt x 157.77254pt>
-File: geojson2.jpg Graphic file (type jpg)
+] [82
 
-<use geojson2.jpg>
-Package pdftex.def Info: geojson2.jpg used on input line 517.
-(pdftex.def)             Requested size: 245.83282pt x 119.0754pt.
- [82
-
- <./geojson2.jpg>] [83
+] [83
 
 ] [84
 
-] [85
+]
+[85
 
 ] [86
 
@@ -1440,24 +1494,46 @@ Package pdftex.def Info: geojson2.jpg used on input line 517.
 
 ] [89
 
-]
-[90
+] <geojson2.jpg, id=1024, 325.72394pt x 157.77254pt>
+File: geojson2.jpg Graphic file (type jpg)
 
-] [91
+<use geojson2.jpg>
+Package pdftex.def Info: geojson2.jpg used on input line 560.
+(pdftex.def)             Requested size: 245.83282pt x 119.0754pt.
+ [90
+
+ <./geojson2.jpg>] [91
 
 ] [92
 
-] <fat-cat.jpg, id=1064, 501.875pt x 380.42125pt>
+] [93
+
+] [94
+
+] [95
+
+] [96
+
+] [97
+
+]
+[98
+
+] [99
+
+] [100
+
+] <fat-cat.jpg, id=1150, 501.875pt x 380.42125pt>
 File: fat-cat.jpg Graphic file (type jpg)
 
 <use fat-cat.jpg>
-Package pdftex.def Info: fat-cat.jpg used on input line 601.
+Package pdftex.def Info: fat-cat.jpg used on input line 644.
 (pdftex.def)             Requested size: 245.83282pt x 186.34418pt.
 
-Overfull \vbox (3.63791pt too high) detected at line 601
+Overfull \vbox (3.63791pt too high) detected at line 644
  []
 
-[93
+[101
 
  <./fat-cat.jpg>]
 \tf@nav=\write6
@@ -1469,20 +1545,20 @@ Overfull \vbox (3.63791pt too high) detected at line 601
 \tf@snm=\write8
 \openout8 = `workshop_bdigital.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 604.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 604.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 647.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 647.
  (./workshop_bdigital.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 604.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 604.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 647.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 647.
 Package rerunfilecheck Info: File `workshop_bdigital.out' has not changed.
 (rerunfilecheck)             Checksum: 678ECE7BE3AEF57A7EE0D16D63E7985F;319.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 604.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 647.
  ) 
 Here is how much of TeX's memory you used:
- 17480 strings out of 495032
- 320830 string characters out of 6181718
- 413954 words of memory out of 5000000
- 20045 multiletter control sequences out of 15000+600000
+ 17515 strings out of 495032
+ 321285 string characters out of 6181718
+ 413953 words of memory out of 5000000
+ 20061 multiletter control sequences out of 15000+600000
  74822 words of font info for 76 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  49i,19n,60p,402b,839s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1496,9 +1572,9 @@ s/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmss9.pfb>
 pe1/public/lm/lmsso9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></u
 sr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmtt8.pfb>
-Output written on workshop_bdigital.pdf (93 pages, 2448998 bytes).
+Output written on workshop_bdigital.pdf (101 pages, 2628942 bytes).
 PDF statistics:
- 1157 PDF objects out of 1200 (max. 8388607)
- 192 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1246 PDF objects out of 1440 (max. 8388607)
+ 208 named destinations out of 1000 (max. 500000)
+ 236 words of extra memory for PDF output out of 10000 (max. 10000000)
 
