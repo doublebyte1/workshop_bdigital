@@ -58,6 +58,10 @@
 %\titlepage
 
 \begin{titlepage}
+\begin{center}
+  \small{\url{https://github.com/doublebyte1/workshop_bdigital}}
+\end{center}
+\vspace{1mm}  
 \centering{ 
   \includegraphics[height=50px]{hadoop.png}    
   \includegraphics[height=50px]{hive2.png}    
@@ -284,16 +288,29 @@ There are no free lunches.
 
 \end{frame}
 
-%\begin{frame}
-%\frametitle{E(L)K}
-%\begin{itemize}
-%  \item<1->Micro-task: Join imported coordinates with WGS84 coordinates and the rest of the dataset
-%  \begin{itemize}
-%    \item<2->Join imported records with original table with all fields
-%    \item<3->Merge imported records with WGS84 records, for a single table with unified geometry
-%  \end{itemize}
-%\end{itemize}
-%\end{frame}
+\begin{frame}
+\frametitle{E(L)K}
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+  \begin{itemize}
+    \item<1->\textbf{ElasticSearch}: Search engine based on Lucene (RESTful, JSON).
+    \item<2->\textbf{Logstash}: tool for managing events and logs.
+    \item<3->\textbf{Kibana}: data visualization platform (custom dashboards).
+  \end{itemize}
+  \end{column}  
+  \begin{column}{0.5\textwidth}
+      \begin{figure}  
+	\includegraphics[width=0.5\textwidth]{es.jpeg}
+       \end{figure}  
+      \begin{figure}  
+	\includegraphics[width=0.2\textwidth]{logstash.png}
+       \end{figure}         
+      \begin{figure}  
+	\includegraphics[width=0.3\textwidth]{kibana.png}
+       \end{figure}  
+  \end{column}    
+\end{columns}
+\end{frame}
 
 \begin{frame}
 \frametitle{Practical}
@@ -303,6 +320,15 @@ There are no free lunches.
 %start and connect to the cluster
 
 \section{Importing a Spatial-Temporal Series} 
+
+\begin{frame}
+\frametitle{Connect to the Cluster}
+  \begin{itemize}
+  \item<1->Problem: the increasing volume of information, by explosion of traditional sources + new sources
+  \item<1->Target: fast query responses, which require a scalable architecture
+  \item<1->Possible solution: support clusters on a cost-effective architecture, such as commodity clusters or cloud environments
+\end{itemize}  
+\end{frame}
 
 \begin{frame}
 \frametitle{From S3 to HDFS}
@@ -590,9 +616,25 @@ There are no free lunches.
 
 \section{Piping the Results into the Outside World} 
 
+\begin{frame}
+\frametitle{ElasticSearch}
+\huge{
+Indexing the results in ElasticSearch
+}
+      \begin{figure}  
+	\includegraphics[width=0.5\textwidth]{es.jpeg}	
+       \end{figure}  
+\end{frame}
 
 \begin{frame}
-\frametitle{Understanding Indexes}
+\frametitle{And now Kibana...!}
+      \begin{figure}  
+	\includegraphics[width=0.8\textwidth]{screenshot.png}	
+       \end{figure}  
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Generating Indexes}
 %\begin{itemize}
 %  \item<1->Micro-task: Join imported coordinates with WGS84 coordinates and the rest of the dataset
 %  \begin{itemize}
@@ -600,41 +642,30 @@ There are no free lunches.
 %    \item<3->Merge imported records with WGS84 records, for a single table with unified geometry
 %  \end{itemize}
 %\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Generating Indexes}
-%\begin{itemize}
-%  \item<1->Micro-task: Join imported coordinates with WGS84 coordinates and the rest of the dataset
-%  \begin{itemize}
-%    \item<2->Join imported records with original table with all fields
-%    \item<3->Merge imported records with WGS84 records, for a single table with unified geometry
-%  \end{itemize}
-%\end{itemize}
-\end{frame}
+%\end{frame}
 
 
 
-\begin{frame}
-\frametitle{References}
-\begin{itemize}\tiny{
-\item \url{http://tweettracker.fulton.asu.edu/tda/TwitterDataAnalytics.pdf}
-\item \url{http://www2.qgis.org}
-\item \url{http://plugins.qgis.org/plugins/}
-\item \url{http://geokoder.com/mongodb-plugin-for-quantum-gis}
-\item \url{http://www.gislounge.com/heat-maps-in-gis/}
-\item \url{https://alastaira.wordpress.com/2011/02/23/heat-mapping-crime-data-with-bing-maps-and-html5-canvas/}
-\item \url{http://docs.qgis.org/2.0/en/docs/user_manual/plugins/plugins_heatmap.html}
-\item \url{http://en.wikipedia.org/wiki/Kernel_\%28statistics\%29\#Kernel\_functions\_in\_common\_use}
-\item \url{http://en.wikipedia.org/wiki/Cluster_analysis}
-\item \url{https://plugins.qgis.org/plugins/clusterpy_qgis_plugin/}
-\item \url{http://www.rise-group.org/section/Software/clusterPy/}
-\item \url{http://threejs.org/}
-\item \url{http://anitagraser.com/2014/03/15/3d-viz-with-qgis-three-js/} }
+%\begin{frame}
+%\frametitle{References}
+%\begin{itemize}\tiny{
+%\item \url{http://tweettracker.fulton.asu.edu/tda/TwitterDataAnalytics.pdf}
+%\item \url{http://www2.qgis.org}
+%\item \url{http://plugins.qgis.org/plugins/}
+%\item \url{http://geokoder.com/mongodb-plugin-for-quantum-gis}
+%\item \url{http://www.gislounge.com/heat-maps-in-gis/}
+%\item \url{https://alastaira.wordpress.com/2011/02/23/heat-mapping-crime-data-with-bing-maps-and-html5-canvas/}
+%\item \url{http://docs.qgis.org/2.0/en/docs/user_manual/plugins/plugins_heatmap.html}
+%\item \url{http://en.wikipedia.org/wiki/Kernel_\%28statistics\%29\#Kernel\_functions\_in\_common\_use}
+%\item \url{http://en.wikipedia.org/wiki/Cluster_analysis}
+%\item \url{https://plugins.qgis.org/plugins/clusterpy_qgis_plugin/}
+%\item \url{http://www.rise-group.org/section/Software/clusterPy/}
+%\item \url{http://threejs.org/}
+%\item \url{http://anitagraser.com/2014/03/15/3d-viz-with-qgis-three-js/} }
 %geojson, coords, regex
     %\item<4->\url{http://datascienceatthecommandline.com/}
-\end{itemize}
-\end{frame}
+%\end{itemize}
+%\end{frame}
 
 \begin{frame}
 \frametitle{Thank you for Listening!}

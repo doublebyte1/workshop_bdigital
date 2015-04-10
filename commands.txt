@@ -1,6 +1,8 @@
-download keys
+//download keys
 https://drive.google.com/a/bdigital.org/file/d/0B5kkho5DSzlyanBkUzgtRWh2OVE/view
 
+//connect by ssh
+ssh hadoop@ec2-52-17-172-105.eu-west-1.compute.amazonaws.com -i ~/.aws/worshop-bdigital.pem
 
 //view the data
 
@@ -39,8 +41,8 @@ select reflect("java.util.UUID", "randomUUID") as id, * from accident_data;
 geohive -e 'select * from accident_data_id where D_COORD_GEO_IMPACTE is not null' > accident_data.tsv
 
 hadoop fs -mkdir /data
-//hadoop fs -put accident_data.tsv /data
-//hadoop fs -cat /data/accident_data.tsv
+hadoop fs -put accident_data.tsv /data
+hadoop fs -cat /data/accident_data.tsv
 
 wget https://s3-eu-west-1.amazonaws.com/workshop-bdsd/recover_geography.pig
 
@@ -61,10 +63,10 @@ create external table accident_data_pol
   location '/data/data_pol';
 
   //merge utm tables  
- create table utm_data_all as select * from accident_data_utm limit 1569; 
+ create table utm_data_all as select * from accident_data_utm; 
  insert into table utm_data_all select * from accident_data_pol;
 
- geohive -e 'select id,lon,lat from utm_data_all where lon is not null limit 42175' > utm_export.tsv
+ geohive -e 'select id,lon,lat from utm_data_all where lon is not null' > utm_export.tsv
   
  psql -h bdigitaldb.celqzuwfokoe.eu-west-1.rds.amazonaws.com -p 5432 -U workshop workshop_bdigital -W
   
@@ -84,6 +86,8 @@ CREATE INDEX idx_coords_wgs84 ON coords USING GIST (wgs84);
 
 update coords set utm=ST_SetSRID(ST_MakePoint(lon,lat), 5554);
 UPDATE coords set wgs84=(ST_Transform(utm, 4326));
+
+//view coordinates
 
 \COPY (select id, ST_ASGeoJson(wgs84) from coords) TO 'coords_data.json';
 
@@ -108,11 +112,13 @@ select
 insert into table all_geometry
   select   id, any  , mes   , dia   , C_HORA_TRUCADA  , D_COORD_GEO_IMPACTE , lon, lat from accident_data_wgs84;
   
-
+  
+select concat("{\"index\":{\"_index\":\"accidents_sample\",\"_type\":\"accident\",\"_id\":", rowsequence() , "}} \n") ,  "loc", array(cast(lon as double),cast(lat as double)) from all_geometry;
+    
 //export data
-geohive -e 'select concat("{\"index\":{\"_index\":\"accidents\",\"_type\":\"accident\",\"_id\":", rowsequence() , "}} \n") ,  "loc", array(cast(lon as double),cast(lat as double)) from all_geometry;' > all_geometry.json
+geohive -e 'select concat("{\"index\":{\"_index\":\"accidents_sample\",\"_type\":\"accident\",\"_id\":", rowsequence() , "}} \n") ,  "loc", array(cast(lon as double),cast(lat as double)) from all_geometry;' > all_geometry.json
 
-
+http://52.16.16.8/#/dashboard/accident_dash?_g=%28refreshInterval:%28display:Off,section:0,value:0%29,time:%28from:now-2y,mode:quick,to:now%29%29&_a=%28filters:!%28%29,panels:!%28%28col:5,id:weekly_acidents,row:3,size_x:5,size_y:4,type:visualization%29,%28col:1,id:accidents_hash,row:3,size_x:4,size_y:4,type:visualization%29,%28col:10,id:Circle_geohash,row:3,size_x:3,size_y:4,type:visualization%29,%28col:1,id:line_chart,row:1,size_x:12,size_y:2,type:visualization%29%29,query:%28query_string:%28analyze_wildcard:!t,query:%27*%27%29%29,title:accident_dash%29
 
 
  
